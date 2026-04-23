@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doksli — Platform Verifikasi Dokumen Mahasiswa</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     BACKGROUND CANVAS (partikel animasi)
+════════════════════════════════════════════ -->
+<canvas id="bg-canvas"></canvas>
+
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-logo">Dok<span>Sli</span></div>
+
+  <div class="nav-links">
+    <a href="#features">Fitur</a>
+    <a href="#how">Cara Kerja</a>
+    <a href="#testimonials">Ulasan</a>
+  </div>
+
+  <div class="nav-button">
+      <button class="nav-signin">Sign In</button>
+      <button class="nav-login">Log In</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════ -->
+<section class="hero">
+
+  <!-- Teks kiri -->
+  <div class="hero-text">
+    <div class="hero-badge">Platform Verifikasi Dokumen #1</div>
+
+    <h1 class="hero-title">
+      Kelola Dokumen<br>
+      <span class="outline">Akademik</span> Anda<br>
+      <span class="blue">Lebih Mudah</span>
+    </h1>
+
+    <p class="hero-desc">
+      Upload, verifikasi, dan bagikan dokumen akademik Anda dengan aman.
+      Scan QR instan, pantau status verifikasi, dan terhubung langsung dengan rekruter terbaik.
+    </p>
+
+    <div class="hero-btns">
+      <button class="btn-primary">Coba Sekarang — Gratis</button>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">12K+</div>
+        <div class="stat-label">Mahasiswa Aktif</div>
+      </div>
+      <div>
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Tingkat Verifikasi</div>
+      </div>
+      <div>
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Institusi</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mockup HP kanan -->
+  <div class="hero-phone">
+    <div class="phone-glow">
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+
+          <div class="app-topbar">Halaman Dashboard Mahasiswa</div>
+
+          <div class="app-header">
+            <div class="app-greet">Hai, Mark 👋</div>
+            <div class="app-bell">🔔</div>
+          </div>
+
+          <div class="app-stat-row">
+            <div class="app-stat-card">
+              <div class="app-stat-icon">📄</div>
+              <div class="app-stat-label">Dokumen Saya</div>
+              <div class="app-stat-num">7</div>
+              <div class="app-stat-sub">2 Menunggu Verifikasi</div>
+            </div>
+            <div class="app-stat-card">
+              <div class="app-stat-icon">✅</div>
+              <div class="app-stat-label">Telah Diverifikasi</div>
+              <div class="app-stat-num">3</div>
+              <div class="app-stat-sub">Oleh 3 Rekruter</div>
+            </div>
+          </div>
+
+          <div class="app-section-header">Aksi Cepat</div>
+          <div class="app-quick-row">
+            <div class="app-quick-btn qb-blue">
+              <div class="app-quick-icon">⬛</div>
+              <div class="app-quick-label">Scan QR</div>
+              <div class="app-quick-sub">untuk masukan dokumen</div>
+            </div>
+            <div class="app-quick-btn qb-navy">
+              <div class="app-quick-icon">⬆️</div>
+              <div class="app-quick-label">Upload Dokumen</div>
+              <div class="app-quick-sub">ke platform</div>
+            </div>
+          </div>
+
+          <div class="app-section-header">Dokumen Terbaru</div>
+
+          <div class="app-doc-item">
+            <div class="app-doc-row">
+              <div>
+                <div class="app-doc-title">Ijazah S1</div>
+                <div class="app-doc-sub">Universitas Neo Culture Technology</div>
+                <div class="app-doc-tags">
+                  <span class="app-tag">Ijazah</span>
+                  <span class="app-tag">Sarjana</span>
+                  <span class="app-tag">IPK : 4.00</span>
+                </div>
+              </div>
+              <div class="dot-green"></div>
+            </div>
+          </div>
+
+          <div class="app-doc-item">
+            <div class="app-doc-row">
+              <div>
+                <div class="app-doc-title">Sertifikat TOEFL</div>
+                <div class="app-doc-sub">Universitas Neo Culture Technology</div>
+                <div class="app-doc-tags">
+                  <span class="app-tag">Sertifikat</span>
+                  <span class="app-tag">Skor : 580</span>
+                </div>
+              </div>
+              <div class="dot-green"></div>
+            </div>
+          </div>
+
+          <div class="app-doc-item" style="margin-bottom: 8px;">
+            <div class="app-doc-row">
+              <div>
+                <div class="app-doc-title">Sertifikat HSK 5</div>
+                <div class="app-doc-sub">Universitas Neo Culture Technology</div>
+                <div class="app-doc-tags">
+                  <span class="app-tag">Sertifikat</span>
+                  <span class="app-tag">Skor : 580</span>
+                </div>
+              </div>
+              <div class="dot-green"></div>
+            </div>
+          </div>
+
+        </div><!-- end phone-screen -->
+
+        <div class="app-bottombar">
+          <div class="app-bottom-icon active">🏠</div>
+          <div class="app-bottom-icon">📄</div>
+          <div class="app-bottom-icon">✅</div>
+          <div class="app-bottom-icon">👤</div>
+        </div>
+      </div><!-- end phone-frame -->
+    </div><!-- end phone-glow -->
+  </div><!-- end hero-phone -->
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     BRAND STRIP
+════════════════════════════════════════════ -->
+<div class="brands">
+  <div class="brands-label">Dipercaya oleh universitas dan rekruter terkemuka</div>
+  <div class="brands-track">
+      <img src="gambar/logo_ui.png" alt="Universitas Indonesia"/>
+      <img src="gambar/logo_itb.png" alt="ITB"/>
+      <img src="gambar/logo_ugm.png" alt="UGM"/>
+      <img src="gambar/logo_binus.png" alt="BINUS"/>
+      <img src="gambar/logo_telkom.png" alt="Telkom University"/>
+      <img src="gambar/logo_unpad.webp" alt="Universitas Padjadjaran"/>
+  </div>
+  <div class="brands-more">dan ribuan universitas lainnya</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     FITUR SECTION
+════════════════════════════════════════════ -->
+<section class="features" id="features">
+  <div class="section-eyebrow">Fitur Unggulan</div>
+  <h2 class="section-title">Semua yang Anda Butuhkan</h2>
+  <p class="section-desc">
+    Dari upload dokumen hingga verifikasi oleh rekruter, semua proses berjalan
+    dalam satu platform yang aman dan mudah digunakan.
+  </p>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev" id="prevBtn">&#8592;</button>
+
+    <div class="carousel-track-outer">
+      <div class="feat-grid" id="featCarousel">
+        <div class="feat-card">
+          <div class="feat-icon">⬆️</div>
+          <div class="feat-title">Upload Dokumen</div>
+          <div class="feat-text">Upload ijazah, sertifikat, dan dokumen akademik lainnya dengan mudah, cepat, dan terenkripsi penuh.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">📲</div>
+          <div class="feat-title">Scan QR Instan</div>
+          <div class="feat-text">Bagikan dokumen Anda ke rekruter hanya dengan satu scan QR code — tanpa perlu kirim file.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">✅</div>
+          <div class="feat-title">Verifikasi Otomatis</div>
+          <div class="feat-text">Dokumen Anda akan diverifikasi oleh institusi terkemuka dalam waktu singkat.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🔒</div>
+          <div class="feat-title">Keamanan Data</div>
+          <div class="feat-text">Dokumen Anda dilindungi dengan enkripsi terkini untuk menjaga privasi dan keamanan informasi.</div>
+        </div>
+        <div class="feat-card">
+            <div class="feat-icon">📊</div>
+            <div class="feat-title">Dashboard Real-time</div>
+            <div class="feat-text">Pantau status verifikasi, jumlah rekruter yang melihat, dan notifikasi langsung di dashboard Anda. </div>
+        </div>
+        <div class="feat-card">
+              <div class="feat-icon">🤝</div>
+              <div class="feat-title">Jaringan Rekruter</div>
+              <div class="feat-text">Terhubung dengan ratusan rekruter dari universitas dan perusahaan top yang aktif mencari kandidat berkualitas.</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-btn next" id="nextBtn">&#8594;</button>
+  </div>
+
+  <div class="carousel-dots" id="carouselDots"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CARA KERJA (HOW IT WORKS)
+════════════════════════════════════════════ -->
+<section class="how" id="how">
+  <div class="section-eyebrow">Cara Kerja</div>
+  <h2 class="section-title">Tiga Langkah Mudah</h2>
+  <p class="section-desc">Proses yang simpel agar Anda bisa fokus pada hal yang penting — karir Anda.</p>
+
+  <div class="steps-grid">
+    <div class="step reveal">
+      <div class="step-num">1</div>
+      <div class="step-title">Daftar Akun</div>
+      <div class="step-text">Buat akun gratis dengan email universitas Anda dalam hitungan detik.</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">2</div>
+      <div class="step-title">Upload Dokumen</div>
+      <div class="step-text">Upload dokumen akademik dan tunggu verifikasi dari institusi Anda.</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">3</div>
+      <div class="step-title">Bagikan & Terhubung</div>
+      <div class="step-text">Gunakan QR code untuk berbagi dokumen ke rekruter dan mulai perjalanan karir Anda.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="section-eyebrow">Ulasan Pengguna</div>
+  <h2 class="section-title">Dipercaya Ribuan Mahasiswa</h2>
+  <p class="section-desc">Dengar langsung dari mereka yang sudah merasakan manfaatnya.</p>
+
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">"DokSli benar-benar mengubah cara saya berbagi dokumen ke rekruter. Tidak perlu lagi kirim email bolak-balik!"</div>
+      <div class="testi-author">
+        <div class="testi-avatar">AR</div>
+        <div>
+          <div class="testi-name">Andi Rahmat</div>
+          <div class="testi-role">Mahasiswa Teknik, ITB</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">"Verifikasi ijazah saya selesai dalam 2 hari! Rekruter langsung percaya karena ada badge verifikasi resmi."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">SP</div>
+        <div>
+          <div class="testi-name">Sari Putri</div>
+          <div class="testi-role">Mahasiswi Manajemen, UI</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">"Fitur QR code-nya luar biasa. Cukup scan saat interview dan semua dokumen langsung tersedia. Keren banget!"</div>
+      <div class="testi-author">
+        <div class="testi-avatar">BK</div>
+        <div>
+          <div class="testi-name">Budi Kurniawan</div>
+          <div class="testi-role">Fresh Graduate, UGM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     CTA SECTION
+════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-title">Mulai Perjalanan<br>Karir Anda <span>Hari Ini</span></h2>
+    <p class="cta-desc">
+      Daftar sekarang dan kelola dokumen akademik Anda lebih mudah dari sebelumnya.
+      Gratis selamanya untuk fitur dasar — tidak perlu kartu kredit.
+    </p>
+    <button class="btn-primary" style="font-size: 16px; padding: 0.85rem 2rem;">
+      Daftar Sekarang — Gratis
+    </button>
+  </div>
+
+  <!-- Mockup HP kedua -->
+  <div class="cta-phone">
+    <div class="phone-glow">
+      <div class="phone-frame" style="width: 200px; box-shadow: 0 0 60px rgba(37,99,235,0.3);">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+
+          <div class="app-header">
+            <div class="app-greet">Hai, Mark 👋</div>
+            <div class="app-bell">🔔</div>
+          </div>
+
+          <div class="app-stat-row">
+            <div class="app-stat-card">
+              <div class="app-stat-icon">📄</div>
+              <div class="app-stat-label">Dokumen</div>
+              <div class="app-stat-num">7</div>
+            </div>
+            <div class="app-stat-card">
+              <div class="app-stat-icon">✅</div>
+              <div class="app-stat-label">Terverifikasi</div>
+              <div class="app-stat-num">3</div>
+            </div>
+          </div>
+
+          <div class="app-section-header">Dokumen Terbaru</div>
+
+          <div class="app-doc-item">
+            <div class="app-doc-row">
+              <div>
+                <div class="app-doc-title">Ijazah S1</div>
+                <div class="app-doc-sub">Neo Culture Technology</div>
+              </div>
+              <div class="dot-green"></div>
+            </div>
+          </div>
+
+          <div class="app-doc-item">
+            <div class="app-doc-row">
+              <div>
+                <div class="app-doc-title">Sertifikat TOEFL</div>
+                <div class="app-doc-sub">Skor : 580</div>
+              </div>
+              <div class="dot-green"></div>
+            </div>
+          </div>
+
+          <div class="app-doc-item" style="margin-bottom: 8px;">
+            <div class="app-doc-row">
+              <div>
+                <div class="app-doc-title">Sertifikat HSK 5</div>
+                <div class="app-doc-sub">Skor : 580</div>
+              </div>
+              <div class="dot-green"></div>
+            </div>
+          </div>
+
+        </div><!-- end phone-screen -->
+
+        <div class="app-bottombar">
+          <div class="app-bottom-icon active">🏠</div>
+          <div class="app-bottom-icon">📄</div>
+          <div class="app-bottom-icon">✅</div>
+          <div class="app-bottom-icon">👤</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">Dok<span>Sli</span></div>
+  <div class="footer-copy">© 2026 DokSli. Semua hak dilindungi.</div>
+</footer>
+
+
+<!-- JavaScript (diletakkan di bawah sebelum </body> agar DOM sudah siap) -->
+<script src="script.js"></script>
+
+</body>
+</html>
